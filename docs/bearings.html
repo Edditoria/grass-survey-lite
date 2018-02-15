@@ -9,6 +9,7 @@
 		<meta name="robots" content="noindex">
 	</head>
 	<body>
+
 		<div>
 			<header>
 				<h1>
@@ -16,6 +17,33 @@
 				</h1>
 			</header>
 		</div>
+
+		<div>
+			<session>
+				<h2>
+					DMS-To-Dec
+				</h2>
+				<div>
+					Convert degrees-minutes-seconds to decimal degrees
+				</div>
+				<div>
+					<input type="text" id="dmsToDec-input-deg" value="12" disabled>
+					<input type="text" id="dmsToDec-input-min" value="34" disabled>
+					<input type="text" id="dmsToDec-input-sec" value="56" disabled>
+				</div>
+			</session>
+		</div>
+
+		<div>
+			<session>
+				<!-- test only -->
+				<p>
+					Let the input is <code>{ deg: '12', min: '34', sec: '56' }</code>.<br />
+					For result, see console.log in developer tools of your browser.
+				</p>
+			</session>
+		</div>
+
 		<div>
 			<nav>
 				<a href="index.html">Home</a>
@@ -26,5 +54,8 @@
 				Copyright &copy; 2018 草
 			</footer>
 		</div>
+
+		<script type="text/javascript" src="assets/js/calc.js"></script>
+		<script type="text/javascript" src="assets/js/test.js"></script>
 	</body>
 </html>
