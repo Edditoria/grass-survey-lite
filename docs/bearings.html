@@ -26,21 +26,38 @@
 				<div>
 					Convert degrees-minutes-seconds to decimal degrees
 				</div>
+				<!-- top display area #todo -->
 				<div>
-					<input type="text" id="dmsToDec-input-deg" value="12" disabled>
-					<input type="text" id="dmsToDec-input-min" value="34" disabled>
-					<input type="text" id="dmsToDec-input-sec" value="56" disabled>
+					<!-- left #todo -->
+					<div>
+						<div>
+							<input type="text" id="dmsToDec-input-deg">&deg;
+							<input type="text" id="dmsToDec-input-min">'
+							<input type="text" id="dmsToDec-input-sec">"
+						</div>
+						<div>
+							<label for="dmsToDec-input-deg">Degrees</label> -
+							<label for="dmsToDec-input-min">Minutes</label> -
+							<label for="dmsToDec-input-sec">Seconds</label>
+						</div>
+					</div>
+					<hr>
+					<!-- right #todo -->
+					<div>
+						<div>
+							<input type="text" id="dmsToDec-output" value="0" readonly>
+						</div>
+						<div>
+							<label for="dmsToDec-output">Decimal Degrees</label>
+						</div>
+					</div>
 				</div>
-			</session>
-		</div>
-
-		<div>
-			<session>
-				<!-- test only -->
-				<p>
-					Let the input is <code>{ deg: '12', min: '34', sec: '56' }</code>.<br />
-					For result, see console.log in developer tools of your browser.
-				</p>
+				<hr>
+				<!-- botton input area #todo -->
+				<div>
+					<button type="submit" id="dmsToDec-submit">Convert</button>
+					<button type="reset" id="dmsToDec-reset">Clear</button>
+				</div>
 			</session>
 		</div>
 
@@ -56,6 +73,6 @@
 		</div>
 
 		<script type="text/javascript" src="assets/js/calc.js"></script>
-		<script type="text/javascript" src="assets/js/test.js"></script>
+		<!-- <script type="text/javascript" src="assets/js/test.js"></script> -->
 	</body>
 </html>
