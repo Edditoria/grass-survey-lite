@@ -1,5 +1,7 @@
-// Scripts to control UI elements in bearings.html
-// Requires calc.js
+/**
+  * @file Scripts to control UI elements.
+  * Requires survey.js
+  */
 
 /**
   * Read from and write to html text boxes for dms-dec convertion
@@ -11,7 +13,7 @@ var dmsToDec = function() {
 		min: document.getElementById('dmsToDec-input-min').value,
 		sec: document.getElementById('dmsToDec-input-sec').value
 	};
-	var dec = calc.dmsToDec(dms);
+	var dec = survey.dmsToDec(dms);
 	// write value to output field
 	document.getElementById('dmsToDec-output').value = dec;
 };
