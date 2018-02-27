@@ -1,0 +1,26 @@
+/*
+	Main css design over this app with mobile-first princples
+	Work with Bootstrap 3 which includes normalize.css
+*/
+
+/* Override Bootstrap */
+
+.list-inline {
+	margin-left: 0;
+}
+
+/* XXS Devices, < 320px */
+
+.custom.container {
+	max-width: 318px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.card {
+	margin-bottom: 4px;
+	width: 155px; /* = (container width - container padding * 2 - margin) / 2 */
+	height: 155px; /* = width */
+	background-color: lightgrey;
+	font-size: 1.5em;
+}
