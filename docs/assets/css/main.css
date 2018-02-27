@@ -18,6 +18,7 @@
 }
 
 .card {
+	vertical-align: top;
 	margin-bottom: 4px;
 	width: 155px; /* = (container width - container padding * 2 - margin) / 2 */
 	height: 155px; /* = width */
