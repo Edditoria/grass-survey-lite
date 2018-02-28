@@ -22,6 +22,25 @@ a:focus {
 	padding-right: 2px;
 }
 
+.navbar-btn-back {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.navbar-title,
+.navbar-title h1,
+h1.navbar-title {
+	display: block;
+	height: 50px; /* from Bootstrap .nav-brand */
+	padding-top: 15px; /* from Bootstrap .nav-brand */
+	padding-right: 3px;
+	padding-bottom: 15px; /* from Bootstrap .nav-brand */
+	padding-left: 74px; /* full weight of .navbar-btn-back + 16px */
+	line-height: 20px;
+	font-size: 24px;
+	color: #777; /* from Bootstrap .nav-brand */
+}
+
 .card {
 	vertical-align: top;
 	margin-bottom: 4px;
