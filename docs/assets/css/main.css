@@ -58,3 +58,7 @@ h1.navbar-title {
 a.fill-full {
 	display: block;
 }
+
+.page-footer {
+	margin-top: 20px; /* = .navbar{margin-bottom} */
+}
