@@ -41,6 +41,35 @@ h1.navbar-title {
 	color: #777; /* from Bootstrap .nav-brand */
 }
 
+.app-input-number-group {
+	text-align: right;
+	color: #337ab7;
+}
+
+.app-input-number-group .input-wrapper {
+	margin-bottom: .2em;
+	font-size: 1.67em;
+}
+
+.app-input-number-group.active .input-wrapper {
+	margin-bottom: .2em;
+	font-size: 2em;
+}
+
+.app-input-number-group input {
+	text-align: right;
+}
+
+.app-input-number-group.active input {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+	border-color: #c7ddef;
+	background-color: #337ab7; /* from Bootstrap primary card */
+	color: white;
+}
+
 .card {
 	vertical-align: top;
 	margin-bottom: 4px;
@@ -48,6 +77,10 @@ h1.navbar-title {
 	height: 155px; /* = width */
 	background-color: lightgrey;
 	font-size: 1.5em;
+}
+
+.borderless {
+	border: none;
 }
 
 .fill-full {
