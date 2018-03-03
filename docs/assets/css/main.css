@@ -14,13 +14,13 @@ a:focus {
 	text-decoration: none;
 }
 
-/* XXS Devices, < 320px */
-
 .custom.container {
 	max-width: 318px;
 	padding-left: 2px;
 	padding-right: 2px;
 }
+
+/* Extra small devices (phones, less than 768px) */
 
 .navbar-btn-back {
 	margin-left: 3px;
@@ -103,4 +103,25 @@ a.fill-full {
 
 .page-footer {
 	margin-top: 20px; /* = .navbar{margin-bottom} */
+}
+
+/* Override Bootstrap: screen-sm
+	- note: Overriding should be done by adding .custom to existing Bootstrap classes */
+
+@media (max-width: 767px) {
+	.custom.container-fluid {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+	.navbar-title,
+	.navbar-title h1,
+	h1.navbar-title {
+		padding-right: 74px;
+		text-align: center;
+	}
 }
