@@ -8,11 +8,8 @@
   */
 var dmsToDec = function() {
 	// read value from input fields
-	var dms = {
-		deg: document.getElementById('dmsToDec-input-deg').value,
-		min: document.getElementById('dmsToDec-input-min').value,
-		sec: document.getElementById('dmsToDec-input-sec').value
-	};
+	var dmsInput = document.getElementById('dmsToDec-input').value;
+	var dms = survey.validateDms(dmsInput); // return dms object
 	var dec = survey.dmsToDec(dms);
 	// write value to output field
 	document.getElementById('dmsToDec-output').value = dec;

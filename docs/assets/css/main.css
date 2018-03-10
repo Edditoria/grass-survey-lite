@@ -64,15 +64,6 @@ h1.navbar-title {
 	color: white;
 }
 
-.app-input-number-group #dmsToDec-input-deg {
-	width: 2.5em; /* quick fix */
-}
-
-.app-input-number-group #dmsToDec-input-min,
-.app-input-number-group #dmsToDec-input-sec {
-	width: 2em; /* quick fix */
-}
-
 .cards .card {
 	vertical-align: top;
 	margin-bottom: 4px;
