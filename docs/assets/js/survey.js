@@ -3,6 +3,7 @@
   */
 
 var survey = {}; // group all forumla into one object to avoid duplicated namespace
+survey.degSym = '\xb0'; // degree symbol in ascii
 
 /**
   * @typedef {(Object|string)} DmsLike - Expect:

@@ -16,10 +16,24 @@ var dmsToDec = function() {
 };
 
 /**
-  * Act as keypad. Insert DMS symbol.
+  * Act as keypad. Append DMS symbol.
+  * Will auto run dmsToDec() when all 3 symbol is presented.
   */
 var keyInsertDmsSym = function(event, targetId) {
-	console.log(event, targetId);
+	targetEle = document.getElementById(targetId);
+	targetVal = targetEle.value
+	// find the last symbol and insert the next one
+	if (targetVal.indexOf('\"') >= 0) {
+		dmsToDec();
+	} else if (targetVal.indexOf('\'') >= 0) {
+		targetEle.value += '\"';
+		dmsToDec();
+	} else if (targetVal.indexOf(survey.degSym) >= 0) {
+		targetEle.value += '\'';
+	} else {
+		targetEle.value += survey.degSym;
+	}
+	targetEle.focus();
 };
 
 /**
