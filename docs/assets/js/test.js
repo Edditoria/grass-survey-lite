@@ -47,3 +47,4 @@ var testValidateDms = function(input, expect) {
 testValidateDms('12\xb034\'56\"', { deg: 12, min: 34, sec: 56 });
 testValidateDms('12-34-56', { deg: 12, min: 34, sec: 56 });
 testValidateDms('12.34.56', { deg: 12, min: 34, sec: 56 });
+testValidateDms('12,34,56', { deg: 12, min: 34, sec: 56 });
