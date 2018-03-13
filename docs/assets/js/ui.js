@@ -16,6 +16,20 @@ var dmsToDec = function() {
 };
 
 /**
+  * Act as keypad. Insert DMS symbol.
+  */
+var keyInsertDmsSym = function(event, targetId) {
+	console.log(event, targetId);
+};
+
+/**
   * Trigger button-click to dmsToDec()
   */
 document.getElementById('dmsToDec-submit').onclick = dmsToDec;
+
+/**
+  * Trigger button-click to keyInsertDmsSym()
+  */
+document.getElementById('key-insert-dms-sym').addEventListener('click', function(event) {
+	keyInsertDmsSym.call(this, event, 'dmsToDec-input');
+}, false);
