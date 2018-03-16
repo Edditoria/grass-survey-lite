@@ -47,3 +47,14 @@ document.getElementById('dmsToDec-submit').onclick = dmsToDec;
 document.getElementById('key-insert-dms-sym').addEventListener('click', function(event) {
 	keyInsertDmsSym.call(this, event, 'dmsToDec-input');
 }, false);
+
+/**
+  * Trigger keyup event in input field
+  *
+  */
+document.getElementById('dmsToDec-input').addEventListener('keyup', function(event) {
+	// if press Enter then convert DMS-to-Dec
+	if (event.which === 13) {
+		dmsToDec();
+	}
+});
