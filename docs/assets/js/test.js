@@ -47,3 +47,14 @@ var testValidateDms = function(input, expect) {
 testValidateDms('12\xb034\'56\"', { deg: 12, min: 34, sec: 56 });
 testValidateDms('12-34-56', { deg: 12, min: 34, sec: 56 });
 testValidateDms('12,34,56', { deg: 12, min: 34, sec: 56 });
+// Test for decimal place
+testValidateDms('358.99\xb058.9\'58.9\"', { deg: 358.99, min: 58.9, sec: 58.9 });
+testValidateDms('360.99\xb00\'0\"', { deg: 360.99, min: 0, sec: 0 });
+testValidateDms('0\xb0360.99\'0\"', { deg: 0, min: 360.99, sec: 0 });
+testValidateDms('0\xb00\'360.99\"', { deg: 0, min: 0, sec: 360.99 });
+testValidateDms('358.99,58.9,58.9', { deg: 358.99, min: 58.9, sec: 58.9 });
+testValidateDms('0,360.99,0', { deg: 0, min: 360.99, sec: 0 });
+testValidateDms('0,0,360.99', { deg: 0, min: 0, sec: 360.99 });
+testValidateDms('358.99-58.9-58.9', { deg: 358.99, min: 58.9, sec: 58.9 });
+testValidateDms('0-360.99-0', { deg: 0, min: 360.99, sec: 0 });
+testValidateDms('0-0-360.99', { deg: 0, min: 0, sec: 360.99 });

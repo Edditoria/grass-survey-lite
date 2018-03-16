@@ -22,8 +22,10 @@ survey.validateDms = function(input) {
 	var errorStr = '[Error] Invalid input in survey.parseDms()';
 	var deg, min, sec;
 	if (typeof input === 'string') {
-		var re1 = /^\d{1,3}\xb0\d{1,2}'\d{1,2}"$/; // regex of format ddd°mm'ss"
-		var re2 = /^\d{1,3}[\-,]\d{1,2}[\-,]\d{1,2}$/; // regex of format ddd-dd-dd or ddd,dd,dd
+		// regex of forgivable format ddd°mm'ss" (or ddd.dd°mmm.mm'sss.ss")
+		var re1 = /^\d+(\.\d*){0,1}\xb0\d+(\.\d*){0,1}'\d+(\.\d*){0,1}"$/;
+		// regex of forgivable format ddd-dd-dd or ddd,dd,dd (or ddd.dd-mmm.mm,sss.ss)
+		var re2 = /^\d+(\.\d*){0,1}[\-,]\d+(\.\d*){0,1}[\-,]\d+(\.\d*){0,1}$/;
 		if (re1.test(input) || re2.test(input)) {
 			var inputArr = input.split(/[\xb0'"\-,]/); // regex; ['ddd', 'mm', 'ss']
 			deg = +inputArr[0]; // number
